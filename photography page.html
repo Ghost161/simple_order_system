@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<title>Brianjr</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    opacity: 0.7;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image:url("https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15171001_1233414846718184_3085576820530946285_n.jpg?oh=8a247d7bb18148d2d8c44daf9dc4c504&oe=58BCC868");
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15056358_1233414770051525_5825070735992137743_n.jpg?oh=e3a2b11a5f0c0e19fdd6225c6a866a5e&oe=588DDC45");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15036665_1233421573384178_7234630382949737070_n.jpg?oh=902b24f66055d612f89099ae06d66536&oe=58D16F86");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+/* Turn off parallax scrolling for tablets and mobiles */
+@media only screen and (max-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar" id="myNavbar">
+    <li><a href="#" class="w3-padding-large">HOME</a></li>
+    <li class="w3-hide-small w3-right">
+      <a href="#" class="w3-padding-large w3-hover-red"><i class="fa fa-search"></i></a>
+    </li>
+  </ul>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-opacity w3-display-container">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">Brian <span class="w3-hide-small"></span> Jr  PHOTOGRAPHY</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>I love Photography</em></p>
+  <p>The 1st picture i ever took was of the sky when I was six and I was pretty intrigued by what i saw, it was there and then that i knew that that was what i wnated to do with my life.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-section">
+      <p><b>Brian Jr</b></p><br>
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15170815_1233421660050836_8279203863054775289_n.jpg?oh=58554348f1d1404f2b4c3687fd51e18f&oe=58B9E776" class="w3-circle" alt="Photo of Me">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-section">
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">MY WORK</h3>
+  <p class="w3-center"><em>Here are some of my latest shots.Click on the images to make them bigger</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15036708_719235291568731_6643198672889811402_n.jpg?oh=50b6710bb5e0c838aaac6b5b9f8020f7&oe=58C1CDBB" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15135928_719235171568743_1478328308939631863_n.jpg?oh=d3ef8a88c33d1a03cc0ff515e557cd08&oe=58C588B4" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15109620_719235374902056_627210619006182436_n.jpg?oh=3a1db439c339730bf844ee99f565fbe5&oe=588B7F09" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15134692_719235381568722_8261141141159230820_n.jpg?oh=5b76ec6f5b9e709faee456083da1c860&oe=58CDAD5C" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15036545_719235384902055_3367907018127285077_n.jpg?oh=ab28cafd08f4947310ceedfc7504c587&oe=58BF24B8" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15078794_719235604902033_7649860455353782293_n.jpg?oh=c1bf4375135339069db4ab7b98316e40&oe=58CCEAA4" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15134770_719235498235377_7756128087921161417_n.jpg?oh=da60fa181eef3a84213f7f3606668c73&oe=58D02C50" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/15055693_719235501568710_6756483129065546183_n.jpg?oh=d49116830252f691f14da7a3380279c5&oe=58C24231" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-text-white w3-xxxlarge w3-container w3-display-topright">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" style="max-width:100%">
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large"></div>
+    </div>
+    <div class="w3-col m8 w3-container w3-section">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker w3-hover-text-black" style="width:30px"></i> New York, US<br>
+        <i class="fa fa-phone w3-hover-text-black" style="width:30px"></i> Phone: +6468374091<br>
+        <i class="fa fa-envelope w3-hover-text-black" style="width:30px"> </i> Email: brianasare.ba@gmail.com<br>
+      </div>
+      <p>For any enquires or bookings. Contact us.</p>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Name">
+        </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Email">
+        </div>
+      </div>
+      <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Comment">
+      <button class="w3-btn w3-section w3-right">SEND</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-dark-grey w3-padding-48 w3-hover-black">
+  <p>Powered by <a href="https://www.facebook.com/brianjrphotos/?ref=aymt_homepage_panel" title="W3.CSS" target="_blank" class="w3-hover-opacity">SocioGeek
+</a></p>
+</footer>
+ 
+SocioGeek
+
+</body>
+</html>
+
